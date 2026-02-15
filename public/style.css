@@ -1335,3 +1335,110 @@ button.normal {
 button.normal:hover {
     background-color: #06665e;
 }
+
+
+/* ===== MOBILE NAVBAR FIX ===== */
+@media (max-width: 799px) {
+  #header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .hamburger {
+    display: block !important;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #1a1a2e;
+    padding: 8px;
+    z-index: 10001;
+  }
+
+  #navbar {
+    display: none !important;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 280px;
+    background-color: #E3E6F3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: right 0.3s ease;
+    z-index: 10000;
+    overflow-y: auto;
+  }
+
+  #navbar.mobile-open {
+    display: flex !important;
+    right: 0;
+  }
+
+  #navbar li {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  #navbar li a {
+    font-size: 16px;
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+
+  .section-p1 {
+    padding: 40px 20px;
+  }
+
+  #hero {
+    padding: 0 20px;
+    height: 70vh;
+  }
+
+  #hero h1 {
+    font-size: 28px;
+  }
+
+  #banner-sm .banner-box {
+    min-width: 100%;
+  }
+
+  #newsletter {
+    padding: 40px 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #newsletter .form {
+    width: 100%;
+  }
+
+  #footer {
+    padding: 40px 20px;
+  }
+
+  #product1 .pro {
+    width: 45%;
+    min-width: unset;
+  }
+}
